@@ -5,3 +5,15 @@ MITRE ATT&CK-mapped attacks are deployed against an Ubuntu EC2 instance and dete
 Attacks are mitigated through automated incident response functions with AWS Lamda.
 
 <img src="AWS_Splunk.png" width="300" height="300" />
+
+### Core components 
+- Amazon Web Services CLI
+- Amazon VPC
+- VPC Flow Logs 
+-	Amazon EC2 
+-	AWS CloudTrail
+-	S3
+-	Amazon CloudWatch
+-	Splunk 
+-	AWS Lambda
+-	Ubuntu
