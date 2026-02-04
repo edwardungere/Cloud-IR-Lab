@@ -4,7 +4,7 @@ This lab demonstrates a full cloud security monitoring and automated incident re
 MITRE ATT&CK-mapped attacks are deployed against an Ubuntu EC2 instance and detected via cloud telemetry.
 Attacks are mitigated through automated incident response functions with AWS Lamda.
 
-<img src="AWS_Splunk.png" width="300" height="300" />
+<img src="AWS-Splunk-Image.png" width="300" height="300" />
 
 ### Core components 
 - Amazon Web Services CLI
