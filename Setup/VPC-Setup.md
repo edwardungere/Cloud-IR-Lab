@@ -6,7 +6,7 @@ IPv4 CIDR Block: **10.0.0.0/16**
 
 Optional: Enable DNS hostnames
 
-CLI: `aws ec2 create-vpc --instance-tenancy 'default' --cidr-block '10.0.0.0/16' --tag-specifications '{"resourceType":"vpc","tags":[{"key":"Name","value":"MyVPC"}]}'` 
+`aws ec2 create-vpc --instance-tenancy 'default' --cidr-block '10.0.0.0/16' --tag-specifications '{"resourceType":"vpc","tags":[{"key":"Name","value":"MyVPC"}]}'` 
 
 # Create Subnets
 
