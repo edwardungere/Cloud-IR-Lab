@@ -12,6 +12,8 @@ Optional: Enable DNS hostnames
 
 ## Public Subnet
 
+Select: **MyVPC**
+
 Name: **Public-1A**
 
 Availability Zone: **us-east-1a**
