@@ -1,47 +1,76 @@
 # System Threat Modeling
 
-## Security Objectives, Component Breakdown, and Scope
+## 1. Security Objectives, Component Breakdown, and Scope
 
-### Automated Ingestion Response Lab
+### 1.1 System Description
 
-#### System Information
+#### 1.1.1 System Information
+- Automated Ingestion Response Lab (AIR) contains an external attacker, an internet-facing EC2 instance hosted in a public subnet an internal EC2 instance that is located in a private subnet, and a third internal instance with Splunk Enterprise.
+- The external attacker machine is monitored and its information is collected by numerous services across AWS.
+- AIR is a system that generates logs these across the control and data plane and correlates for a full-system view and optimized log collection.
+- Any attacks are responded to with automated detection and response techniques that follow well-known standards.
 
-- Automated Ingestion Response Lab contains an internet-facing EC2 instance hosted in a public subnet for external client requests.
-- An second, internal EC2 instance is located in a private subnet for internal workloads and is not directly accessible by the internet.
-- A third interal instance with Splunk Enterprise used to ingesting logs across AWS.
-- System logs are sent from Splunk Universal Forwarder (installed on the public and private instances) to Splunk SIEM. VPC flow logs containing network metadata are sent to CloudWatch log groups, and CloudTrail logs are stored in S3 buckets. Splunk SIEM periodically pulls these logs using IAM permissions.
-- Splunk ingests these logs, and performs event indexing, correlation, threat detection, and alert generation.
-- When a detection rule is triggered, Splunk sends these alerts via a webhook to Amazon API Gateway, which invokes serverless Lambda  functions to exectue automated mitigation and response actions.
+#### 1.1.2 Technology 
+- AIR uses Splunk Enterprise as an internal SIEM the public and private instances send logs to.
+- The public instance is used for client requests, while the internal instance is used for internal workloads and is not directly accessible by the internet. 
+- Splunk Universal Forwarder (SUF) is installed on the victim instances, and forwards system logs to Splunk SIEM.
+- VPC flow logs capture network traffic and metadata, these are sent to CloudWatch logs. CloudTrail logs api and IAM activity and stores them in S3 buckets.
+- Splunk assumes an IAM role and periodically pulls these logs and sends generated alerts to Amazon API gateway, which then invokes Lambda functions to execute automated mitigation.
 
-### Data Flow Diagram
+### 1.2 Data Flow Diagram
 ![dfd](data-flow-diagram.drawio.png)
 
-### Internal Assests
-- EC2 instances
-- Credentials / IAM roles
-- Network access
-- Logs and telemetry
+#### 1.2.1 Untrused zones
+- Internet
+
+#### 1.2.2 Trusted zones
+- Public subnet (DMZ)
+- Private subnet
+
+## 2. Security Objectives 
+
+### 2.1 (STRIDE)
+#### Spoofing:
+- Initial compromise of public EC2
+- Lateral movement between public and private instances
+- IAM privilege escalation
+- Persistence mechanisms
+#### Tampering:
+
+#### Repudiation:
+
+#### Information Disclosure:
+
+#### Denial of Service:
+
+#### Eleveation of Privilege:
+
+### 2.2 Out of Scope
+- Physical access
+- Zero-day kernel exploits
+- Multi-account compromise
+
+## 3. Components
+| Component Name | Description | Function |
+|----------|----------|----------|
+| Splunk SIEM    | Data 3   | Pulls, indexes, correlates, and generates alers from logs  | 
+| Amazon S3    | Storage service that stores data and retrieves data within buckets  | CloudTrail storage destination   |
+| Row 2    | Data 3   | Data 4   |   
+| Row 2    | Data 3   | Data 4   |   
+| Row 2    | Data 3   | Data 4   |   
+| Row 2    | Data 3   | Data 4   |   
+| Row 2    | Data 3   | Data 4   |   
 
 Threat Actors
 - External attacker machine
 - Compromised public machine
 
-Attack Techniques
-Mapped to MITRE ATT&CK, for example:
-- SSH brute force (T1110)
-- Privilege escalation (T1068)
-- Persistence (T1053)
-- Cloud API abuse (T1098)
 
 Assumptions
 - Single AWS account
 - No internal malicious users
 - Limited lateral movement
 
-#### Out of Scope
-- Physical access
-- Zero-day kernel exploits
-- Multi-account compromise
 
 #### Reducing false positives
 - Correlating multiple signals
