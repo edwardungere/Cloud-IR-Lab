@@ -1,4 +1,4 @@
-## Automated Ingestion & Response (IR) Lab 
+## Automated Ingestion & Response (AIR) Lab 
 
 The Atuomated Ingestion Response lab demonstrates a full cloud security monitoring and automated incident response pipline using **AWS** and **Splunk**. 
 
