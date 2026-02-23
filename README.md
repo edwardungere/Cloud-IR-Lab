@@ -1,6 +1,6 @@
-## Cloud Ingestion & Response (IR) Lab 
+## Automated Ingestion & Response (IR) Lab 
 
-The Cloud Ingestion-Response lab demonstrates a full cloud security monitoring and automated incident response pipline using **AWS** and **Splunk**. 
+The Atuomated Ingestion Response lab demonstrates a full cloud security monitoring and automated incident response pipline using **AWS** and **Splunk**. 
 
 Instead of relying on a single telemetry source to respond to threats, the lab shows how logs across the control and data plane can be correlated to provide visibility into adversary tactics and techniques and enable effective, automated mitigation.
 
