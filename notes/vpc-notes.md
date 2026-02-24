@@ -6,6 +6,14 @@ AWS creates default vpc's in every region and a default public subnet in every A
 - multiple can stay within a region
 - each vpc has a block of addresses
 
+by default, all subnets within a vpc can talk to each other,
+they cannot if: 
+- They are in different VPCs (without VPC Peering / Transit Gateway)
+- NACLs explicitly deny traffic
+- Security Groups block inbound traffic
+
+each vpc has one virtual router, managed by AWS. route tables are configured and attached to vpcs
+
 other definitions
 - peering: direct connection between two vpc's
 - vpc endpoint: private ip connection to public AWS resources
