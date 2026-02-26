@@ -61,13 +61,14 @@
 ## 3. Components
 | Component Name | Description | Function |
 |----------|----------|----------|
-| Splunk Enterprise    | System Information Event Manager   | Pulls, indexes, correlates, and generates alers from logs  | 
+| Splunk Enterprise    | System Information Event Manager  | Pulls, indexes, correlates, and generates alers from logs  | 
+| Amazon EC2    | IaaS that serves as a Virtual Machine in the cloud | Serves as an internal instance and workload instance |
+| CloudWatch | Monitors and logs application metrics and events  | Destination for VPC flow logs and network metdata  |   
+| CloudTrail | Tracks and logs management and configuration data | Logs control plane data from AWS CLI, SDK, API calls, etc.  |   
 | Amazon S3    | Storage service that stores data and retrieves data within buckets  | CloudTrail storage destination   |
-| CloudWatch | SaaS service that monitors and logs application metrics and events  | Destination for VPC flow logs and network metdata  |   
-| CloudTrail | SaaS component that tracks and logs control plane data | Data 4  |   
 | Lambda     | Severless compute service that runs script in managed enviroment| Short, quick lived functions for mediating attacks |   
 | Splunk Universal Forwarder    | Application installed on machines that sends operating system logs to SIEM | Sends auth.log/syslog files to Splunk |   
-| Row 2    | Data 3   | Data 4   |   
+| Amazon IAM  | SaaS that manages identities and access to AWS resources and services | Controls access to AWS resources with user and role configurations |   
 
 Threat Actor
 - Compromised internal machine
