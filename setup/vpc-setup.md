@@ -6,7 +6,7 @@ IPv4 CIDR Block: **10.0.0.0/16**
 
 Optional: Enable DNS hostnames
 
-# Create Private Subnets
+# Create private subnets
 
 Select: **MyVPC**
 
