@@ -53,6 +53,7 @@
 - Adding IAM policy to compromised role
   
 ### 2.2 Out of Scope
+- External threats
 - Physical access
 - Zero-day kernel exploits
 - Multi-account compromise
@@ -62,9 +63,9 @@
 |----------|----------|----------|
 | Splunk Enterprise    | System Information Event Manager   | Pulls, indexes, correlates, and generates alers from logs  | 
 | Amazon S3    | Storage service that stores data and retrieves data within buckets  | CloudTrail storage destination   |
-| CloudWatch | Data 3   | Data 4   |   
-| CloudTrail | SaaS component that tracks and logs control plane data | Data 4   |   
-| Lambda     | Severless compute service that runs code in managed enviroment| Short, quick lived functions that mediate attacks |   
+| CloudWatch | SaaS service that monitors and logs application metrics and events  | Destination for VPC flow logs and network metdata  |   
+| CloudTrail | SaaS component that tracks and logs control plane data | Data 4  |   
+| Lambda     | Severless compute service that runs script in managed enviroment| Short, quick lived functions for mediating attacks |   
 | Splunk Universal Forwarder    | Application installed on machines that sends operating system logs to SIEM | Sends auth.log/syslog files to Splunk |   
 | Row 2    | Data 3   | Data 4   |   
 
