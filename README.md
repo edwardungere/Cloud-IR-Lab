@@ -14,6 +14,10 @@ Activity from the attacker will generate telemetry across AWS API logs, VPC netw
 
 ### 3.1 Overview
 
+AIR utilizes cloud services that lie on seperate layers of the shared responsibility model. On the IaaS level, EC2 instances are used to represent internal machines and workloads they support. On the SaaS level, AWS CloudWatch and CloudTrail are logging services that enable logging of metadata such as IP data and traffic flow within the VPC to configuration changes and API calls. This means, when paired together, they monitor data across the control and data plane. 
+
+### 3.2 Network Design Decisions
+
 <img src="aws-splunk.png" width="300" height="300" />
 
 
