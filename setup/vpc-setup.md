@@ -28,7 +28,7 @@ Name: **Private-RT**
 
 VPC: **MyVPC**
 
-Subnet associations: **Private-1B**, **Private-2B**
+Subnet associations: **Private-1A**, **Private-1B**
 
 
 
