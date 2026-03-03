@@ -1,4 +1,6 @@
-# Create VPC
+# VPC Setup
+
+## Create VPC
 
 Name: **MyVPC** 
 
@@ -6,7 +8,7 @@ IPv4 CIDR Block: **10.0.0.0/16**
 
 Optional: Enable DNS hostnames
 
-# Create private subnets
+## Create private subnets
 
 Select: **MyVPC**
 
@@ -22,7 +24,7 @@ Availability Zone: **us-east-1b**
 
 IPv4 CIDR Block: **10.0.2.0/24**
 
-# Create private route table
+## Create private route table
 
 Name: **Private-RT**
 
