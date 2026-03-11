@@ -2,6 +2,8 @@
 
 ## Create Splunk instance
 
+Name: splunk-instance
+
 AMI (Amazon Machine Image): **Amazon Linux 2023**
 
 Instance type: **t3.medium**
