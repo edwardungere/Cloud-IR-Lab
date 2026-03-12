@@ -44,6 +44,10 @@
 
 > Run splunk
 
+`sudo /path/to/splunk/bin/splunk enable boot-start`
+
+> Create script to run Splunk on boot
+
 ## Open Splunk
 > Create a login for Splunk using username: admin and password:
 > SPLUNK-$instance-id$
