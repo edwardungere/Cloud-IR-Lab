@@ -4,7 +4,7 @@
 
 Name: splunk-instance
 
-AMI (Amazon Machine Image): **Amazon Linux 2023**
+AMI (Amazon Machine Image): **Red Hat Enterprise Linux 10**
 
 Instance type: **t3.medium**
 
