@@ -48,7 +48,18 @@
 
 > Create script to run Splunk on boot
 
+`sudo path/to/splunk/bin/splunk status`
+
+> Check Splunk status
+
 ## Open Splunk
 > Create a login for Splunk using username: admin and password:
 > SPLUNK-$instance-id$
 
+`https://<public IP address>:8000`
+
+> Open your browser and enter the instance's public IP address
+
+> Append port 8000 to the end, this is where Splunk is running
+
+> Enter the same credentials you created within the shell
