@@ -2,6 +2,8 @@
 
 ## Goal
 
-
-
 ## Design descisions
+
+## Admin Access
+
+## Internet Access
