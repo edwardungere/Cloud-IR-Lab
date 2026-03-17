@@ -55,32 +55,28 @@
 ### 2.2 Out of Scope
 - External threats
 - Physical access
+- Malware installation
 - Zero-day kernel exploits
 - Multi-account compromise
 
 ## 3. Components
 | Component Name | Description | Function |
 |----------|----------|----------|
-| Splunk Enterprise    | System Information Event Manager  | Pulls, indexes, correlates, and generates alers from logs  | 
-| Amazon EC2    | IaaS that serves as a Virtual Machine in the cloud | Serves as an internal instance and workload instance |
+| Splunk Enterprise    | System Information Event Manager  | Pulls, indexes, correlates, and generates alerts from logs  | 
+| Amazon EC2    | IaaS that serves as a Virtual Machine in the cloud | Serves as an internal databse and public webserver |
 | CloudWatch | Monitors and logs application metrics and events  | Destination for VPC flow logs and network metdata  |   
-| CloudTrail | Tracks and logs management and configuration data | Logs control plane data from AWS CLI, SDK, API calls, etc.  |   
-| Amazon S3    | Storage service that stores data and retrieves data within buckets  | CloudTrail storage destination   |
-| Lambda     | Severless compute service that runs script in managed enviroment| Short, quick lived functions for mediating attacks |   
-| Splunk Universal Forwarder    | Application installed on machines that sends operating system logs to SIEM | Sends auth.log/syslog files to Splunk |   
-| Amazon IAM  | SaaS that manages identities and access to AWS resources and services | Controls access to AWS resources with user and role configurations |   
+| CloudTrail | Tracks and logs management and configuration data | Logs control plane data from AWS Console, CLI, SDK, and API calls| 
+| Amazon S3    | Storage service that stores data and retrieves data within buckets  | CloudTrail storage destination  |
+| Lambda    | Severless compute service that runs script in managed enviroment| Short, quick lived functions for mediating attacks | 
+| Splunk Universal Forwarder    | Application installed on machines that sends operating system logs to SIEM | Sends auth.log/syslog files and other logs to Splunk |   
+| Amazon IAM  | SaaS that manages identities and access to AWS resources and services | Controls admin and Splunk access to AWS resources with user and role configurations |  
 
 Threat Actor
-- Compromised internal machine
-
+- Exteral adversary
+- Compromised public server
+- Compromised internal database
 
 Assumptions
 - Single AWS account
 - No internal malicious users
 - Limited lateral movement
-
-
-#### Reducing false positives
-- Correlating multiple signals
-- Detecting sequences (e.g., API change → SSH → privilege escalation)
-- Making detections defendable
