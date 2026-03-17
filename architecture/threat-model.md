@@ -71,12 +71,12 @@
 | Splunk Universal Forwarder    | Application installed on machines that sends operating system logs to SIEM | Sends auth.log/syslog files and other logs to Splunk |   
 | Amazon IAM  | SaaS that manages identities and access to AWS resources and services | Controls admin and Splunk access to AWS resources with user and role configurations |  
 
-Threat Actor
+## 4. Threat Actor
 - Exteral adversary
 - Compromised public server
 - Compromised internal database
 
-Assumptions
+## 5. Assumptions
 - Single AWS account
 - No internal malicious users
 - Limited lateral movement
