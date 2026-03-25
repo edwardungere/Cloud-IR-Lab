@@ -4,11 +4,10 @@
 
 Financially motivated external actor targeting confidential business data.
 
-Adversary's goal are:
+Adversary's goals are:
 
 1. Data exfiltration -  Access and steal confidential data (credentials, records, config files) from the private subnet.
-2. Persistence - Tamper with S3/Cloudtrail stored logs to cover tracks.
-3. Privilege escalation - Obtain admin privileges on EC2 instances and escalate via AWS IAM to broaden access to cloud resources.
+2. Privilege escalation - Obtain admin privileges on EC2 instances and escalate via AWS IAM to broaden access to cloud resources.
    
 ## Starting position
 
